@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe4e1, #ffdde1);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  color: #e6005c;
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff3366;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e6005c;
+}
+
+.hidden {
+  display: none;
+  margin-top: 20px;
+  color: #d63384;
+  font-size: 20px;
+}
+
+/* Hearts Animation */
+.hearts::before, .hearts::after {
+  content: "💖 💘 💝 💓 💗 💞 💕";
+  position: absolute;
+  animation: float 10s linear infinite;
+  font-size: 24px;
+  white-space: nowrap;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  opacity: 0.4;
+}
+
+@keyframes float {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
